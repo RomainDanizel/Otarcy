@@ -1,3 +1,6 @@
+## This is a student project made by Mylène M'zali, Danizel Romain, Decelle Yann et David Tessier
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

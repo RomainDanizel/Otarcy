@@ -38,13 +38,13 @@ console.log('should have worked')
         <div className="links">
           <a href="/" className="navbar-brand">img</a>
           <a href="/" className="navbar-brand">img</a>
-          <button> i am a button</button>
+          <button className="newplant">+</button>
           <a href="/" className="navbar-brand">img</a>
           <a href="/" className="navbar-brand">img</a>
 
         </div>
 
-        <div>
+        <div className="blackbar">
         </div>
        
       </nav>

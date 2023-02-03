@@ -1,12 +1,3 @@
-function MyButton() {
-    return (
-      <button>
-        I'm a button
-      </button>
-    );
-  }
-
-
   function FindingAutocomplete(x, array){
     if(x.length >= 1){
     let validname = []
@@ -42,10 +33,21 @@ console.log('should have worked')
 
   export default function MyApp() {
     return (
-      <div>
-        <h1>Welcome to my app</h1>
-        <MyButton />
-      </div>
+      <nav className="navbar">
+
+        <div className="links">
+          <a href="/" className="navbar-brand">img</a>
+          <a href="/" className="navbar-brand">img</a>
+          <button> i am a button</button>
+          <a href="/" className="navbar-brand">img</a>
+          <a href="/" className="navbar-brand">img</a>
+
+        </div>
+
+        <div>
+        </div>
+       
+      </nav>
     );
   }
   

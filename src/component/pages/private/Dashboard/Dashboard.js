@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import recette1 from '../../../../assets/ex.png'
 import recette2 from '../../../../assets/ex2.png'
 import recette3 from '../../../../assets/ex3.png'
@@ -49,7 +50,11 @@ export default function Dashboard() {
           </div>
           </li>)}
         </ul>
-        <button style={{borderColor:'#33A847',backgroundColor:'transparent', color:'#33A847', width:'-webkit-fill-available', padding:'10px', fontSize:'13px', fontFamily:'Roboto' }}>Voir plus</button>
+        <Link to='/product'>
+          <button style={{borderColor:'#33A847',backgroundColor:'transparent', color:'#33A847', width:'-webkit-fill-available', padding:'10px', fontSize:'13px', fontFamily:'Roboto' }}>
+            Voir plus
+          </button>
+        </Link>
       </div>
       <div>
         <h1>Tutoriel Potager</h1>

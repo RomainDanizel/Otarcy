@@ -1,27 +1,24 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Fragment, useState } from "react";
-import Dashboard from "./component/Dashboard/Dashboard";
-import Preference from "./component/Preference/Preference";
-import Login from "./component/Login/Login";
-import useToken from "./component/service/useToken";
+import {Routes, Route} from "react-router-dom"
+
+import SignUpModal from "./component/SignUpModal";
+import SignInModal from "./component/SignInModal"
+import LandingComponent from "./component/pages/Landing";
+import Dashboard from "./component/pages/private/Dashboard/Dashboard";
 
 
 function App() {
-  const {token, setToken} = useToken()
-
-  if (!token) {
-    return <Login setToken= {setToken}/>
-  }
   return (
-    <Fragment>
-      <h1>Application</h1>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/dashboard" element={<Dashboard/>}></Route>
-          <Route path='/preference' element={<Preference/>}></Route>
-        </Routes>
-      </BrowserRouter>
-    </Fragment>
+    <>
+      <Routes>
+        <Route path="/" element={<LandingComponent />} />
+        <Route path="/login" element={<SignInModal/>}></Route>
+        <Route path="/sign" element={<SignUpModal/>}></Route>
+        <Route path="/dashboard" element={<Dashboard />}>
+          
+        </Route>
+      </Routes>
+    </>
   );
 }
+
 export default App;

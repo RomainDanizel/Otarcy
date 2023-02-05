@@ -1,0 +1,169 @@
+@import '../assets/reset';
+@import '../assets/import';
+@import '../assets/variables';
+
+.legumeSolo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    div
+    {
+        width: 100%;
+    }
+
+    .imgContainer
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    h2 
+    {
+        font-family: $titleFont;
+        display : flex;
+        font-size: 1.5em;
+        font-weight: 400;
+        margin: 12% 0 10% 2%;
+    }
+
+    .imgSquare
+    {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 5%;
+        margin-bottom: 10%;
+
+        img
+        {
+            width: auto;
+            height: auto;
+        }
+    }
+    ul
+    {
+        font-family: $bodyFont;
+        font-size: 1em;
+        font-weight: 100;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin: 10% 5%;
+        color : rgb(134, 134, 134);
+
+        li
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5% 0;
+        }
+    }
+
+    a 
+    {
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 1em;
+        font-weight: 100;
+        font-family: $bodyFont;
+        transition: all 0.3s ease-in-out;
+        &:hover
+        {
+            color: $secondary-color;
+        }
+    }
+
+    button
+    {
+        width: 80%;
+        margin: 10% 0;
+        padding: 5% 0;
+        color: $primary-color;
+        font-family: $bodyFont;
+        font-size: 0.9em;
+        font-weight: 800;
+        border: solid 3px $primary-color;
+        border-radius: 10px;
+    }
+
+    h3
+    {
+        display: flex;
+        width: 100%;
+        font-family: $bodyFont;
+        font-weight: 800;
+        margin: 10% 5%;
+        text-transform: uppercase;
+    }
+
+    ul:last-of-type
+    {
+        width: 90%;
+    }
+
+    .CheckPopUp
+    {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-family: $bodyFont;
+        font-size: 1em;
+        font-weight: 100;
+
+        form
+        {       
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+
+            label
+            {
+                padding: 10% 5%;
+            }
+
+            .chooseState
+            {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-gap: 10px;
+            }
+            button
+            {
+                width: 80%;
+                margin: 10% 0;
+                padding: 5% 0;
+                color: $primary-color;
+                font-family: $bodyFont;
+                font-size: 0.9em;
+                font-weight: 800;
+                border: solid 3px $primary-color;
+                border-radius: 10px;
+            }
+        }
+
+    }
+    .hidden
+    {
+        display: none;
+    }
+}

@@ -1,5 +1,5 @@
 import React, {} from 'react';
-import Legume from './legume';
+import Legume from './components/legume/legume';
 
 const App = () => {
 

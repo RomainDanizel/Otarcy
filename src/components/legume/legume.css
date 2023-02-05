@@ -141,5 +141,38 @@ table {
 .legumeSolo ul:last-of-type {
   width: 90%;
 }
+.legumeSolo .CheckPopUp {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+}
+.legumeSolo .CheckPopUp form {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+.legumeSolo .CheckPopUp form label {
+  padding: 10% 5%;
+}
+.legumeSolo .CheckPopUp form .chooseState {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+}
+.legumeSolo .hidden {
+  display: none;
+}
 
 /*# sourceMappingURL=legume.css.map */

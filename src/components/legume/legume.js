@@ -14,6 +14,14 @@ function Legume() {
     fetchData();
   }, []);
 
+// when .checkbutton is clicked, the .CheckPopUp will lose the .hidden class
+  const CheckButton = document.querySelector('.CheckButton');
+  const CheckPopUp = document.querySelector('.CheckPopUp');
+  CheckButton.addEventListener('click', () => {
+    CheckPopUp.classList.remove('hidden');
+  });
+  
+
   return (
     <div className='legumeSolo'>
       {data.attributes && (
@@ -38,7 +46,7 @@ function Legume() {
 
       <a href='/'>Recette liée</a>
 
-      <button>Status Check</button>
+      <button className='CheckButton'>Status Check</button>
 
     <h3><p>Récapitulatif du dernier bilan de santé</p></h3>
     <ul>
@@ -47,6 +55,54 @@ function Legume() {
       <li><p>State: </p><p>Final</p></li>
       <li><p>Anomalies: </p><p>None</p></li>
     </ul>
+
+    <div className='CheckPopUp hidden'>
+        <form>
+          <label>
+            <p>Current State: </p>
+            <input type="text" name="Status" />
+          </label>
+          {/* select a state: */}
+          <label>
+            <p>Current Status: </p>
+            <select>
+              <option value="Good">Good</option>
+              <option value="Bad">Bad</option>
+              <option value="Decent">Decent</option>
+            </select>
+          </label>
+          <label>
+            <p>Growth State: </p>
+            <div className='chooseState'>
+              <div>
+                <p>Nothing</p>
+                <input type="radio" name="nothing" />
+              </div>
+              <div>
+                <p>Seedling</p>
+                <input type="radio" name="seedling" />
+              </div>
+              <div>
+                <p>Vegetative</p>
+                <input type="radio" name="vegetative" />
+              </div>
+              <div>
+                <p>Flowering</p>
+                <input type="radio" name="flowering" />
+              </div>
+              <div>
+                <p>Final</p>
+                <input type="radio" name="final" />
+              </div>
+            </div>
+          </label>
+          <label>
+            <p>Current Anomalies: </p>
+            <input type="text" name="Anomalies" />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+    </div>
     </div>
   );
 };

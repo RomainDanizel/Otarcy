@@ -111,4 +111,47 @@
     {
         width: 90%;
     }
+
+    .CheckPopUp
+    {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-family: $bodyFont;
+        font-size: 1em;
+        font-weight: 100;
+
+        form
+        {       
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+
+            label
+            {
+                padding: 10% 5%;
+            }
+
+            .chooseState
+            {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-gap: 10px;
+            }
+        }
+
+    }
+    .hidden
+    {
+        display: none;
+    }
 }

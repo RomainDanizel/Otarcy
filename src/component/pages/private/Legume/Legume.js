@@ -31,6 +31,10 @@ function Legume() {
       });
     }
   }, [submitCheckUpRef, checkPopUpRef]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   
 
   return (

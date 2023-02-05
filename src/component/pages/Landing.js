@@ -10,7 +10,8 @@ export default function LandingComponent() {
         <div style={{backgroundImage: `url(${background })`,backgroundRepeat: 'no-repeat',backgroundSize:'100%', height:'600px', width:'375px', margin:'none'}}>
           <div style={{display:'flex', justifyContent:'center', alignContent:'center', flexDirection:'column'}}>  
             <img src={logo} alt="logo"></img>
-            <h1 style={{textAlign:'center'}}>Le potager virtuel</h1>
+            <h1 style={{textAlign:'center', color:'white'}}>Otarcy</h1>
+            <h1 style={{textAlign:'center', color:'white'}}>Le potager virtuel</h1>
           </div>
         </div>
       

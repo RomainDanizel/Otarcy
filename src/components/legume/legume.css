@@ -171,6 +171,17 @@ table {
   grid-template-rows: 1fr 1fr;
   grid-gap: 10px;
 }
+.legumeSolo .CheckPopUp form button {
+  width: 80%;
+  margin: 10% 0;
+  padding: 5% 0;
+  color: #33A847;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9em;
+  font-weight: 800;
+  border: solid 3px #33A847;
+  border-radius: 10px;
+}
 .legumeSolo .hidden {
   display: none;
 }

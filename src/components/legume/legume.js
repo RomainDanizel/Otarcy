@@ -100,7 +100,7 @@ function Legume() {
             <p>Current Anomalies: </p>
             <input type="text" name="Anomalies" />
           </label>
-          <input type="submit" value="Submit" />
+          <button><p>Submit</p></button>
         </form>
     </div>
     </div>

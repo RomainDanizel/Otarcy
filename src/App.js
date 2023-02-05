@@ -35,6 +35,15 @@ console.log('should have worked')
 
   export default function MyApp() {
     return (
+
+      <div>
+
+        <div className="search">
+          <h1>Search</h1>
+          <input className="searchinput"></input>
+        </div>
+
+
       <nav className="navbar">
 
         <div className="links">
@@ -50,6 +59,8 @@ console.log('should have worked')
         </div>
        
       </nav>
+
+      </div>
     );
   }
   

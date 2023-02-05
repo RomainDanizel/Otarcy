@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import './legume.css';
+import React, { useState, useEffect, useRef } from 'react';import './legume.css';
 
 function Legume() {
   const [data, setData] = useState({});
+  const checkButtonRef = useRef(null);
+  const checkPopUpRef = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,12 +15,22 @@ function Legume() {
     fetchData();
   }, []);
 
-// when .checkbutton is clicked, the .CheckPopUp will lose the .hidden class
-  const CheckButton = document.querySelector('.CheckButton');
-  const CheckPopUp = document.querySelector('.CheckPopUp');
-  CheckButton.addEventListener('click', () => {
-    CheckPopUp.classList.remove('hidden');
-  });
+  useEffect(() => {
+    if (checkButtonRef.current) {
+      checkButtonRef.current.addEventListener('click', () => {
+        checkPopUpRef.current.classList.remove('hidden');
+      });
+    }
+  }, [checkButtonRef, checkPopUpRef]);
+
+  const submitCheckUpRef = useRef(null);
+  useEffect(() => {
+    if (submitCheckUpRef.current) {
+      submitCheckUpRef.current.addEventListener('click', () => {
+        checkPopUpRef.current.classList.add('hidden');
+      });
+    }
+  }, [submitCheckUpRef, checkPopUpRef]);
   
 
   return (
@@ -46,7 +57,7 @@ function Legume() {
 
       <a href='/'>Recette liée</a>
 
-      <button className='CheckButton'>Status Check</button>
+      <button className='CheckButton' ref={checkButtonRef}>Status Check</button>
 
     <h3><p>Récapitulatif du dernier bilan de santé</p></h3>
     <ul>
@@ -56,7 +67,7 @@ function Legume() {
       <li><p>Anomalies: </p><p>None</p></li>
     </ul>
 
-    <div className='CheckPopUp hidden'>
+    <div className='CheckPopUp hidden' ref={checkPopUpRef}>
         <form>
           <label>
             <p>Current State: </p>
@@ -100,7 +111,7 @@ function Legume() {
             <p>Current Anomalies: </p>
             <input type="text" name="Anomalies" />
           </label>
-          <button><p>Submit</p></button>
+          <button className='SubmitCheckUp' ref={submitCheckUpRef}>Submit</button>
         </form>
     </div>
     </div>

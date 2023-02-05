@@ -1,13 +1,25 @@
-import React, {} from 'react';
-import Legume from './components/legume/legume';
 
-const App = () => {
+import {Routes, Route} from "react-router-dom"
 
+import SignUpModal from "./component/SignUpModal";
+import SignInModal from "./component/SignInModal"
+import LandingComponent from "./component/pages/Landing";
+import Dashboard from "./component/pages/private/Dashboard/Dashboard";
+
+
+function App() {
   return (
-    <div>
-      <Legume/>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<LandingComponent />} />
+        <Route path="/login" element={<SignInModal/>}></Route>
+        <Route path="/sign" element={<SignUpModal/>}></Route>
+        <Route path="/dashboard" element={<Dashboard />}>
+          
+        </Route>
+      </Routes>
+    </>
   );
-};
+}
 
 export default App;

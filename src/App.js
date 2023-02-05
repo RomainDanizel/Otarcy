@@ -1,4 +1,6 @@
-  function FindingAutocomplete(x, array){
+ 
+ 
+ function FindingAutocomplete(x, array){
     if(x.length >= 1){
     let validname = []
 
@@ -36,11 +38,11 @@ console.log('should have worked')
       <nav className="navbar">
 
         <div className="links">
-          <a href="/" className="navbar-brand">img</a>
-          <a href="/" className="navbar-brand">img</a>
+          <a href="/" className="navbar-brand"><img alt="home" src="./img/home.png"></img></a>
+          <a href="/" className="navbar-brand"><img alt="nav" src="./img/search.png"></img></a>
           <button className="newplant">+</button>
-          <a href="/" className="navbar-brand">img</a>
-          <a href="/" className="navbar-brand">img</a>
+          <a href="/" className="navbar-brand"><img alt="nav" src="./img/chat.png"></img></a>
+          <a href="/" className="navbar-brand"><img alt="nav" src="./img/user.png"></img></a>
 
         </div>
 
